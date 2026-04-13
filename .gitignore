@@ -1,0 +1,22 @@
+# Data files (too large for GitHub)
+990_parsed.csv
+990_parsed_fix.csv
+990_parsed_fix2.csv
+analysis/990_features.csv
+analysis/resilience_scores.csv
+analysis/peer_benchmarks.csv
+analysis/longitudinal_stats.csv
+analysis/hidden_gems.csv
+
+# Raw IRS data
+irs_990_raw/
+
+# Temp files
+_temp_extract/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
