@@ -100,7 +100,7 @@ SEG_COLORS = {"Elite Performers":"#059669", "Diversified Growers":"#F59E0B", "St
 
 @st.cache_data
 def load_segments():
-    df = pd.read_csv("analysis/nonprofit_segments.csv", low_memory=False)
+    df = pd.read_csv("analysis/nonprofit_segments.csv.gz", low_memory=False)
     for c in ["surplus_ratio","financial_cushion","revenue_diversification","revenue_stability",
               "asset_liability_ratio","total_revenue","total_functional_expenses","net_assets_eoy","hhi"]:
         if c in df.columns: df[c] = pd.to_numeric(df[c], errors="coerce")
@@ -110,7 +110,7 @@ def load_segments():
 
 @st.cache_data
 def load_readiness():
-    df = pd.read_csv("analysis/client_readiness_scores.csv", low_memory=False)
+    df = pd.read_csv("analysis/client_readiness_scores.csv.gz", low_memory=False)
     for c in ["total_revenue","surplus_ratio","financial_cushion","revenue_diversification",
               "revenue_stability","asset_liability_ratio","client_readiness_score",
               "s1_surplus","s2_cushion","s3_diversification","s4_stability","s5_solvency"]:
